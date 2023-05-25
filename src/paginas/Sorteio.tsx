@@ -13,6 +13,9 @@ export default function Sorteio() {
   const enviar = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setAmigoSecreto(resultado.get(participanteDaVez));
+    setTimeout(() => {
+      setAmigoSecreto("");
+    }, 5000);
   };
   return (
     <Card>
@@ -35,11 +38,11 @@ export default function Sorteio() {
           <p>Clique em sortear para ver quem é seu amigo secreto!</p>
           <button className="botao-sortear">Sortear</button>
         </form>
-        {amigoSecreto && (
+        {
           <p className="resultado" role="alert">
             {amigoSecreto}
           </p>
-        )}
+        }
         <footer className="sorteio">
           <img
             src="/imagens/aviao.png"
