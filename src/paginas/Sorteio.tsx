@@ -35,14 +35,15 @@ export default function Sorteio() {
               <option key={participante}>{participante}</option>
             ))}
           </select>
-          <p>Clique em sortear para ver quem é seu amigo secreto!</p>
+          <p>Clique em sortear para ver quem é seu amigo secreto! </p>
+          <p>O nome dele irá sumir depois de 5 segundos!</p>
           <button className="botao-sortear">Sortear</button>
         </form>
-        {
-          <p className="resultado" role="alert">
-            {amigoSecreto}
-          </p>
-        }
+
+        <p className="resultado" role="alert">
+          {amigoSecreto}
+        </p>
+
         <footer className="sorteio">
           <img
             src="/imagens/aviao.png"

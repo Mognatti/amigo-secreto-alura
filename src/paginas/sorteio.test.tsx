@@ -53,7 +53,7 @@ describe("Pagina sorteio", () => {
     fireEvent.click(botao);
 
     const amigoSecreto = screen.getByRole("alert");
-    expect(amigoSecreto).toBeInTheDocument();
+    expect(amigoSecreto).not.toHaveTextContent("");
   });
 
   test("esconde amigo secreto após timer", () => {
